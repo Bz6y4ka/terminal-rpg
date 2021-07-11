@@ -4,31 +4,31 @@ using System.Text;
 
 namespace terminal_rpg
 {
-    public class DuduGameClass
+    public class DuduGameClass // переименовать в Dudu
     {
-        public int ConvokeTime = 100;
+        public int ConvokeTime = 100; // сделать константой, константы ПИШУТСЯ_В_ТАКОМ_КЕЙСЕ и сделать ее private, String
         public DuduGameClass( int ConvokeTime)
         {
-            this.ConvokeTime = ConvokeTime;
+            this.ConvokeTime = ConvokeTime; // лишнее
         }
 
     }
-    class FeralDudu
+    class FeralDudu // вынести в отдельный класс - отнаследовать от друида
     {
-        int StartEnergy = 0;
-        int Shred = 20;
-        int Bite;
+        int StartEnergy = 0; // private
+        int Shred = 20; // private и константа
+        int Bite; // to String, константа = 'Укус'
 
         public FeralDudu(int StartEnergy, int Shred, int Bite)
         {
-            this.StartEnergy = StartEnergy;
-            this.Shred = Shred;
-            this.Bite = Bite;
+            this.StartEnergy = StartEnergy; // инициализируется внутри класса
+            this.Shred = Shred; // константа - не инициализируется
+            this.Bite = Bite; 
         }
 
         public void StartAttack(int ConvokeTime)
         {
-            ConvokeTime = Shred * 16;
+            ConvokeTime = Shred * 16; // 16 в константу
         }
 
         public void ShredAttack()
@@ -45,8 +45,9 @@ namespace terminal_rpg
         }
     }
 
-    class BoomieDudu
+    class BoomieDudu // отдельный класс
     {
+        // константы MOON_FIRE_DAMAGE
         int MoonFireDamage = 1000;
         int MoonFire = 20;
         int StartManaPool = 100;
@@ -56,9 +57,9 @@ namespace terminal_rpg
             ConvokeTime = MoonFireDamage * 16;
         }
 
-        public void MoonFireAttck(int ConvokeTime)
+        public void MoonFireAttck(int ConvokeTime) // поправить очепятку
         {
-            StartManaPool -= MoonFire;
+            StartManaPool -= MoonFire; // что будет, если мы уйдет за 0?
         }
     }
 }
