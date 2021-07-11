@@ -7,7 +7,7 @@ namespace terminal_rpg
     public class Player
     {
         public string PlayerName { get; }
-        public string GameClass { get; }
+        public string GameClass { get; } // класс GameClass
         public int Inventory { get; }
         public int HealthPoint { get; }
 
@@ -35,7 +35,7 @@ namespace terminal_rpg
             Console.WriteLine(Inventory);
         }
 
-        public void ResurseReload()
+        public void ResurseReload() // RegenResource
         {
             
         }
