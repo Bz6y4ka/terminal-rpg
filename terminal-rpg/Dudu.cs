@@ -6,6 +6,6 @@ namespace terminal_rpg
 {
     class Dudu
     {
-        private const string Convoke = "Кастую конвоук, ууууууу";
+        public const string Convoke = "Кастую конвоук, ууууууу";
     }
 }
