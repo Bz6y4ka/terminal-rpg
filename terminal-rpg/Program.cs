@@ -6,7 +6,7 @@ namespace terminal_rpg
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Ща во всем разберусь");
         }
     }
 }
